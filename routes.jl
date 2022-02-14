@@ -1,12 +1,10 @@
 using Genie.Router
-using BookingsController
-using MoviesController
+using DataexplorerController
+using PlotsexplorerController
 
 route("/") do
   serve_static_file("welcome.html")
 end
 
-route("/booking", BookingsController.booking)
-route("/movies", MoviesController.movies)
-
-# route("/", DashboardController.dashboard)
+route("/dataexplorer", DataexplorerController.explorer)
+route("/plotsexplorer", PlotsexplorerController.explorer)

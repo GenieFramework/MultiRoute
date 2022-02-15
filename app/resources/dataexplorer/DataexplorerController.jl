@@ -57,7 +57,7 @@ function ui(model::IrisModel)
     )
 end
 
-my_model = init(IrisModel)
+my_model = init(IrisModel())
 
 function explorer()
     html(:dataexplorer, "explorer.jl", model = my_model, context = @__MODULE__)

@@ -83,7 +83,7 @@ function ui(model::Model)
 
     page(
         model,
-        class = "container",
+        class = "container-fluid",
         title = "Study Data Explorer",
         head_content = Genie.Assets.favicon_support(),
         prepend = style("""
@@ -106,7 +106,7 @@ function ui(model::Model)
             heading("Study Data Explorer and the Awesomeness of Genie")
             row(
                 cell(
-                    class = "container",
+                    class = "container-fluid",
                     [plot(:plot_data, layout = :layout, config = :config)],
                 ),
             )
@@ -149,7 +149,7 @@ function ui(model::Model)
     )
 end
 
-my_model = handler(init(Model()))
+my_model = handler(init(Model))
 
 function explorer()
     html(:plotsexplorer, "explorer.jl", model = my_model, context = @__MODULE__)

@@ -149,10 +149,10 @@ function ui(model::Model)
     )
 end
 
-my_model = handler(init(Model))
+# my_model = handler(init(Model))
 
 function explorer()
-    html(:plotsexplorer, "explorer.jl", model = my_model, context = @__MODULE__)
+    model = Model |> init |> handler |> ui
 end
 
 end

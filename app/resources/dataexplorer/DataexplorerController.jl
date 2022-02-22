@@ -15,7 +15,7 @@ const data = DataFrames.insertcols!(dataset("datasets", "iris"))
 end
 
 function explorer()
-    html(:dataexplorer, "explorer.jl", model = init(IrisModel), context = @__MODULE__)
+    html(:dataexplorer, "dataexplorer.jl", model = init(IrisModel), context = @__MODULE__)
 end
 
 end
